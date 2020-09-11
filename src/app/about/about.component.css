@@ -1,0 +1,28 @@
+.title {
+  text-align: center;
+  margin: 25px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 10px;
+  align-items: center;
+  border: 2px solid pink;
+  padding: 5px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+}

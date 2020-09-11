@@ -1,0 +1,9 @@
+.title {
+  text-align: center;
+}
+
+.saved-container {
+  display: flex;
+  justify-content: center;
+  background-color: seagreen;
+}
