@@ -2,25 +2,38 @@
 
 <section class="result">
   <p>Because you're feeling ____, ____, and ____...</p>
-  <div>Here is where the result image/quote will appear!</div>
+  <div>
+    <img class="landscape" src="{{ randomPhoto.urls.full }}" alt="landscape" />
+    <p>This is where quote goes.</p>
+    <button class="add">+</button>
+  </div>
 </section>
 
 <section class="todo-list">
   <div>
     <button (click)="toggleCollapse()" class="tips-button hide">Tips ▼</button>
   </div>
- <div *ngIf="!isCollapsed"> <ol class="list">
-    <li>item</li>
-    <li>item</li>
-    <li>item</li>
-  </ol>
-</div>
+  <div *ngIf="!isCollapsed">
+    <ol class="list">
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ol>
+  </div>
 </section>
 
 <section class="youtube">
   <div>
     <button (click)="toggleCollapse()" class="youtube-button">Video ▼</button>
   </div>
-  <div *ngIf="!isCollapsed" class="video-player hide">This is where the YouTube goes.</div>
-  
+  <div *ngIf="!isCollapsed" class="video-player hide">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/${videoResults.etag}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
 </section>

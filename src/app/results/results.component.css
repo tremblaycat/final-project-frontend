@@ -5,6 +5,10 @@
   margin: 10px;
 }
 
+.landscape {
+  width: 500px;
+}
+
 .tips-button {
   width: 100%;
 }
@@ -12,5 +16,3 @@
 .youtube-button {
   width: 100%;
 }
-
-

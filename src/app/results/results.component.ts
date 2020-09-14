@@ -10,6 +10,7 @@ import { InspiritService } from '../inspirit.service';
 export class ResultsComponent implements OnInit {
   isCollapsed: boolean = true;
   randomPhoto: any;
+  videoResults: any;
   constructor(
     private route: ActivatedRoute,
     private service: InspiritService
@@ -20,12 +21,20 @@ export class ResultsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getPhoto();
+    this.getYoutube();
   }
 
   getPhoto = (): any => {
     this.service.getUnsplash().subscribe((response) => {
       console.log(response);
       this.randomPhoto = response;
+    });
+  };
+
+  getYoutube = (): any => {
+    this.service.getYoutube('cats').subscribe((response) => {
+      console.log(response);
+      this.videoResults = response;
     });
   };
 }
