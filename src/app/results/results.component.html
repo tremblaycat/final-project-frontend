@@ -7,18 +7,20 @@
 
 <section class="todo-list">
   <div>
-    <button class="tips-button">Tips ▼</button>
+    <button (click)="toggleCollapse()" class="tips-button hide">Tips ▼</button>
   </div>
-  <ol class="list">
+ <div *ngIf="!isCollapsed"> <ol class="list">
     <li>item</li>
     <li>item</li>
     <li>item</li>
   </ol>
+</div>
 </section>
 
 <section class="youtube">
   <div>
-    <button class="youtube-button">Video ▼</button>
+    <button (click)="toggleCollapse()" class="youtube-button">Video ▼</button>
   </div>
-  <div class="video-player">This is where the YouTube goes.</div>
+  <div *ngIf="!isCollapsed" class="video-player hide">This is where the YouTube goes.</div>
+  
 </section>

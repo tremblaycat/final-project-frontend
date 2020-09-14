@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-
+isCollapsed: boolean = true;
   constructor() { }
 
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
+  }
   ngOnInit(): void {
   }
 
