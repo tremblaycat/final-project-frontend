@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'results', component: ResultsComponent },
   { path: 'stream', component: StreamComponent },
+
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // redirect to `home`
   { path: '**', component: NotFoundComponent },
 ];

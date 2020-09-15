@@ -27,7 +27,7 @@ export class InspiritService {
   }
 
   getQuotes = (): any => {
-    return this.http.get(`${this.databaseUrl}/quotes`);
+    return this.http.get(`${this.databaseUrl}/results`);
   };
 
   getYoutube = (searchTerm: string): any => {
