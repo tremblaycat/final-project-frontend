@@ -35,7 +35,7 @@ export class InspiritService {
       params: {
         key: this.youtubeKey,
         part: 'snippet',
-        maxResults: '1',
+        maxResults: '3',
         q: searchTerm,
       },
     });
