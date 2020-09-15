@@ -29,13 +29,14 @@ export class ResultsComponent implements OnInit {
     this.getPhoto();
     this.getYoutube();
     this.getQuotes();
-    this.getFeelings();
+    this.feelingsArray = this.service.getFeelings();
+    this.getRandomFeeling();
   }
-  getFeelings = () => {
-    this.service.getFeelings().subscribe((response) => {
-      this.feelingsArray = response;
-    });
-  };
+  // getFeelings = () => {
+  //   this.service.getFeelings().subscribe((response) => {
+  //     this.feelingsArray = response;
+  //   });
+  // };
 
   getPhoto = (): any => {
     this.service.getUnsplash().subscribe((response) => {
@@ -50,6 +51,12 @@ export class ResultsComponent implements OnInit {
       this.quoteResults = response;
     });
   };
+
+  getRandomFeeling = () => {
+    let randomNumber = Math.floor(Math.random() * this.feelingsArray.length)
+    console.log(this.feelingsArray[randomNumber]);
+    return this.feelingsArray[randomNumber];
+  }
 
   getYoutube = (): any => {
     this.service.getYoutube(`cats`).subscribe((response) => {

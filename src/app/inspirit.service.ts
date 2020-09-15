@@ -11,12 +11,17 @@ export class InspiritService {
   youtubeKey: string = 'AIzaSyDU4joJlDxavDm3eHutikmLh8NmDpVvvhs';
   youtubeUrl: string = 'https://www.googleapis.com/youtube/v3/search';
   databaseUrl: string = 'http://localhost:3000';
-  feelings: any = [];
+  feelings: string[] = [];
   constructor(private http: HttpClient) {}
 
   getFeelings = () => {
     return this.feelings;
   };
+
+  addToFeelings = (feeling: string) => {
+    this.feelings.push(feeling);
+    console.log(this.feelings)
+  }
 
   getUnsplash = () => {
     return this.http.get(this.apiUrl, {
