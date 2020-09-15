@@ -8,11 +8,14 @@ import { InspiritService } from '../inspirit.service';
   styleUrls: ['./results.component.css'],
 })
 export class ResultsComponent implements OnInit {
-  // @Input() quoteRef: any;
   isCollapsed: boolean = true;
   randomPhoto: any;
   videoResults: any;
   quoteResults: any;
+  feelingsArray: any;
+  // randomAdjective: number = Math.floor(
+  //   Math.random() * this.feelingsArray.length
+  // );
   constructor(
     private route: ActivatedRoute,
     private service: InspiritService
@@ -21,11 +24,18 @@ export class ResultsComponent implements OnInit {
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
   }
+
   ngOnInit(): void {
     this.getPhoto();
     this.getYoutube();
     this.getQuotes();
+    this.getFeelings();
   }
+  getFeelings = () => {
+    this.service.getFeelings().subscribe((response) => {
+      this.feelingsArray = response;
+    });
+  };
 
   getPhoto = (): any => {
     this.service.getUnsplash().subscribe((response) => {
@@ -42,7 +52,7 @@ export class ResultsComponent implements OnInit {
   };
 
   getYoutube = (): any => {
-    this.service.getYoutube('cats').subscribe((response) => {
+    this.service.getYoutube(`cats`).subscribe((response) => {
       console.log(response);
       this.videoResults = response;
     });
