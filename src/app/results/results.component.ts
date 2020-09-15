@@ -11,6 +11,7 @@ export class ResultsComponent implements OnInit {
   isCollapsed: boolean = true;
   randomPhoto: any;
   videoResults: any;
+  quoteResults: any;
   constructor(
     private route: ActivatedRoute,
     private service: InspiritService
@@ -22,12 +23,20 @@ export class ResultsComponent implements OnInit {
   ngOnInit(): void {
     this.getPhoto();
     this.getYoutube();
+    this.getQuotes();
   }
 
   getPhoto = (): any => {
     this.service.getUnsplash().subscribe((response) => {
       console.log(response);
       this.randomPhoto = response;
+    });
+  };
+
+  getQuotes = (): any => {
+    this.service.getQuotes().subscribe((response) => {
+      console.log(response);
+      this.quoteResults = response;
     });
   };
 
