@@ -8,6 +8,7 @@ import { InspiritService } from '../inspirit.service';
   styleUrls: ['./results.component.css'],
 })
 export class ResultsComponent implements OnInit {
+  // @Input() quoteRef: any;
   isCollapsed: boolean = true;
   randomPhoto: any;
   videoResults: any;
