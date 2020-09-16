@@ -42,7 +42,6 @@ export class HomeComponent implements OnInit {
     'insignificant',
     'disconnected',
     'humble',
-    'petty',
     'spiritual',
     'inspired',
   ];
@@ -61,9 +60,5 @@ export class HomeComponent implements OnInit {
 
   addFeeling = (feeling: string) => {
     this.service.addToFeelings(feeling);
-  };
-
-  limitFeels = () => {
-    this.service.limitFeels(this.feelingsArray);
   };
 }

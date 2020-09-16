@@ -1,15 +1,19 @@
 <app-header></app-header>
 
-<form>
-  <label for="username">What's your name?</label>
-  <input type="text" name="username" id="username" [(ngModel)]="name" />
-</form>
-<p>How are you feeling? (Choose 3)</p>
-<button
-  *ngFor="let adjective of adjectives"
-  class="{{ adjective }}"
-  (click)="addFeeling(adjective)"
->
-  {{ adjective }}
-</button>
-<button (click)="getResults()">Results</button>
+<section class="home">
+  <form>
+    <label for="username">What's your name?</label>
+    <input type="text" name="username" id="username" [(ngModel)]="name" />
+  </form>
+  <p>How are you feeling? (Choose 3)</p>
+  <button
+    *ngFor="let adjective of adjectives"
+    class="{{ adjective }} adjective"
+    (click)="addFeeling(adjective)"
+  >
+    {{ adjective }}
+  </button>
+  <div class="results-button">
+    <button class="button" (click)="getResults()">Get your results!</button>
+  </div>
+</section>

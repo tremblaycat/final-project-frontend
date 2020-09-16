@@ -8,6 +8,9 @@
 .nav {
   overflow: hidden;
   font-family: Arial;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .nav link {
@@ -36,13 +39,13 @@
 
 .nav link:hover,
 .nav-dropdown:hover .dropdown {
-  background-color: seagreen;
+  background-color: none;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: pink;
+  background-color: none;
   min-width: 160px;
   z-index: 1;
 }
@@ -57,7 +60,7 @@
 }
 
 .dropdown-content link:hover {
-  background-color: #ddd;
+  background-color: none;
 }
 
 .nav-dropdown:hover .dropdown-content {
@@ -74,5 +77,5 @@
 
 .button {
   border: none;
-  background-color: cadetblue;
+  background-color: none;
 }

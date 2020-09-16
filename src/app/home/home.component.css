@@ -1,0 +1,23 @@
+.home {
+  margin: 25px;
+  padding: 25px;
+  background-color: white;
+}
+
+.adjective {
+  border: none;
+  background-color: white;
+  margin: 10px;
+}
+
+.adjective:hover {
+  background-color: #d7c0d0;
+}
+
+.results-button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: #053225;
+  color: white;
+}
