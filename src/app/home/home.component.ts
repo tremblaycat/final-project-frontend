@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { InspiritService } from '../inspirit.service';
+import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,21 +9,61 @@ import { InspiritService } from '../inspirit.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  adjectives: string[] = ['sad', 'happy', 'anxious', 'excited', 'angry', 'hopeful', 'cheerful', 'nostalgic', 'creative', 'depressed', 'adventurous', 'confused', 'heartbroken', 'remorseful', 'guilty', 'spiteful', 'passionate', 'joyful', 'peaceful', 'worried', 'calm', 'discouraged', 'jealous', 'comfortable', 'confident', 'thankful', 'dull', 'proud', 'overwhelmed', 'insignificant', 'disconnected', 'humble', 'petty', 'spiritual', 'inspired'];
+  adjectives: string[] = [
+    'sad',
+    'happy',
+    'anxious',
+    'excited',
+    'angry',
+    'hopeful',
+    'cheerful',
+    'nostalgic',
+    'creative',
+    'depressed',
+    'adventurous',
+    'confused',
+    'heartbroken',
+    'remorseful',
+    'guilty',
+    'spiteful',
+    'passionate',
+    'joyful',
+    'peaceful',
+    'worried',
+    'calm',
+    'discouraged',
+    'jealous',
+    'comfortable',
+    'confident',
+    'thankful',
+    'dull',
+    'proud',
+    'overwhelmed',
+    'insignificant',
+    'disconnected',
+    'humble',
+    'petty',
+    'spiritual',
+    'inspired',
+  ];
   feelingsArray: any = [];
-  @Output() value = new EventEmitter<any>();
-  constructor(private service: InspiritService) {}
+
+  name: string;
+
+  constructor(private service: InspiritService, private router: Router) {}
 
   ngOnInit(): void {}
 
+  getResults = () => {
+    this.service.setUserName(this.name);
+    this.router.navigate(['/results']);
+  };
+
   addFeeling = (feeling: string) => {
     this.service.addToFeelings(feeling);
-  }
-  getFeeling = (value: any) => {
-    this.feelingsArray.push(value);
-    // console.log(this.feels);
-    this.service.feelings = this.feelingsArray;
-    this.value.emit(this.feelingsArray);
-    console.log(this.service.feelings);
+  };
+
+  limitFeels = () => {
+    this.service.limitFeels(this.feelingsArray);
   };
 }

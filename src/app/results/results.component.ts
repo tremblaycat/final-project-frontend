@@ -13,9 +13,8 @@ export class ResultsComponent implements OnInit {
   videoResults: any;
   quoteResults: any;
   feelingsArray: any;
-  // randomAdjective: number = Math.floor(
-  //   Math.random() * this.feelingsArray.length
-  // );
+  name: string;
+
   constructor(
     private route: ActivatedRoute,
     private service: InspiritService
@@ -31,12 +30,9 @@ export class ResultsComponent implements OnInit {
     this.getQuotes();
     this.feelingsArray = this.service.getFeelings();
     this.getRandomFeeling();
+    this.name = this.service.getName();
+    console.log(this.name);
   }
-  // getFeelings = () => {
-  //   this.service.getFeelings().subscribe((response) => {
-  //     this.feelingsArray = response;
-  //   });
-  // };
 
   getPhoto = (): any => {
     this.service.getUnsplash().subscribe((response) => {
@@ -53,10 +49,10 @@ export class ResultsComponent implements OnInit {
   };
 
   getRandomFeeling = () => {
-    let randomNumber = Math.floor(Math.random() * this.feelingsArray.length)
+    let randomNumber = Math.floor(Math.random() * this.feelingsArray.length);
     console.log(this.feelingsArray[randomNumber]);
     return this.feelingsArray[randomNumber];
-  }
+  };
 
   getYoutube = (): any => {
     this.service.getYoutube(`cats`).subscribe((response) => {

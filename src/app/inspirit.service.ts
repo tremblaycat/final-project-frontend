@@ -12,6 +12,7 @@ export class InspiritService {
   youtubeUrl: string = 'https://www.googleapis.com/youtube/v3/search';
   databaseUrl: string = 'http://localhost:3000';
   feelings: string[] = [];
+  name: string;
   constructor(private http: HttpClient) {}
 
   getFeelings = () => {
@@ -20,8 +21,12 @@ export class InspiritService {
 
   addToFeelings = (feeling: string) => {
     this.feelings.push(feeling);
-    console.log(this.feelings)
-  }
+    console.log(this.feelings);
+  };
+
+  limitFeels = (feelings) => {
+    return this.feelings.slice(0, 3);
+  };
 
   getUnsplash = () => {
     return this.http.get(this.apiUrl, {
@@ -49,5 +54,14 @@ export class InspiritService {
         q: searchTerm,
       },
     });
+  };
+
+  setUserName = (name: string) => {
+    this.name = name;
+    console.log(this.name);
+  };
+
+  getName = () => {
+    return this.name;
   };
 }

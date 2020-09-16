@@ -1,10 +1,15 @@
 <app-header></app-header>
 
-<form #feelingsForm="ngForm">
+<form>
   <label for="username">What's your name?</label>
-  <input type="text" name="username" id="username" />
+  <input type="text" name="username" id="username" [(ngModel)]="name" />
 </form>
-
 <p>How are you feeling? (Choose 3)</p>
-<button *ngFor="let adjective of adjectives" class="{{adjective}}" (click)="addFeeling(adjective)">{{adjective}}</button>
-<button routerLink="/results">Results</button>
+<button
+  *ngFor="let adjective of adjectives"
+  class="{{ adjective }}"
+  (click)="addFeeling(adjective)"
+>
+  {{ adjective }}
+</button>
+<button (click)="getResults()">Results</button>
