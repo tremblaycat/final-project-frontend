@@ -57,11 +57,9 @@ export class ResultsComponent implements OnInit {
   };
 
   getYoutube = (): any => {
-    this.service
-      .getYoutube(`{{this.selectedFeeling}}`)
-      .subscribe((response) => {
-        console.log(response);
-        this.videoResults = response;
-      });
+    this.service.getYoutube(`${this.selectedFeeling}`).subscribe((response) => {
+      console.log(response);
+      this.videoResults = response;
+    });
   };
 }
