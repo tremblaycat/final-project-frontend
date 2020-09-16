@@ -14,6 +14,7 @@ export class ResultsComponent implements OnInit {
   quoteResults: any;
   feelingsArray: any;
   name: string;
+  selectedFeeling: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -51,13 +52,16 @@ export class ResultsComponent implements OnInit {
   getRandomFeeling = () => {
     let randomNumber = Math.floor(Math.random() * this.feelingsArray.length);
     console.log(this.feelingsArray[randomNumber]);
-    return this.feelingsArray[randomNumber];
+    this.selectedFeeling = this.feelingsArray[randomNumber];
+    return this.selectedFeeling;
   };
 
   getYoutube = (): any => {
-    this.service.getYoutube(`cats`).subscribe((response) => {
-      console.log(response);
-      this.videoResults = response;
-    });
+    this.service
+      .getYoutube(`{{this.selectedFeeling}}`)
+      .subscribe((response) => {
+        console.log(response);
+        this.videoResults = response;
+      });
   };
 }
