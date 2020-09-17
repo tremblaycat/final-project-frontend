@@ -34,8 +34,6 @@ export class ResultsComponent implements OnInit {
     console.log(this.name);
   }
 
-  
-
   getPhoto = (): any => {
     this.service.getUnsplash().subscribe((response) => {
       console.log(response);
@@ -58,21 +56,20 @@ export class ResultsComponent implements OnInit {
     });
   };
 
-
   getRandomFeeling = () => {
     this.feelingsArray = this.service.getFeelings();
     let randomNumber = Math.floor(Math.random() * this.feelingsArray.length);
     console.log(this.feelingsArray[randomNumber]);
     this.selectedFeeling = this.feelingsArray[randomNumber];
-    // this.getYoutube();
+    this.getYoutube();
   };
 
-  // getYoutube = (): any => {
-  //   this.service
-  //     .getYoutube(`self-help-for-feeling-${this.selectedFeeling}`)
-  //     .subscribe((response) => {
-  //       console.log(response);
-  //       this.videoResults = response;
-  //     });
-  // };
+  getYoutube = (): any => {
+    this.service
+      .getYoutube(`self-help-for-feeling-${this.selectedFeeling}`)
+      .subscribe((response) => {
+        console.log(response);
+        this.videoResults = response;
+      });
+  };
 }

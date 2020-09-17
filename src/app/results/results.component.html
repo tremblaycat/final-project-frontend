@@ -27,13 +27,15 @@
   </div>
   <section class="youtube">
     <div *ngIf="!isCollapsed" class="video-player hide">
-      <!-- <youtube-player
+      <p class="video-text">Check out this video:</p>
+      <youtube-player
         videoId="{{ videoResults.items[0].id.videoId }}"
         suggestedQuality="highres"
-        [height]="250"
-        [width]="500"
+        [height]="170"
+        [width]="230"
       >
-      </youtube-player> -->
+      </youtube-player>
+
       <!-- <youtube-player
         videoId="{{ videoResults.items[1].id.videoId }}"
         suggestedQuality="highres"

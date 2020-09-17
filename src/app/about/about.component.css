@@ -1,6 +1,8 @@
 .title {
   text-align: center;
   margin: 25px;
+  color: #fff;
+  font-size: 20px;
 }
 
 .row {
@@ -17,12 +19,26 @@
   flex-basis: 100%;
   flex: 1;
   margin: 10px;
+  margin-bottom: 20px;
   align-items: center;
-  border: 2px solid pink;
+  background-color: #fff;
   padding: 5px;
+  box-shadow: 1px 5px 10px 5px #363636;
+  border-radius: 20px;
 }
 
 .img {
   width: 200px;
   height: 200px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.name {
+  color: black;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.bio-text {
+  text-align: center;
 }

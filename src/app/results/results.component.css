@@ -35,11 +35,23 @@
 .recommendations-container {
   background-color: #fff;
   margin: 10px;
-  margin-left: 5px;
+
   border-radius: 10px;
   text-align: left;
   word-wrap: normal;
   padding: 10px;
+}
+
+.video-text {
+  color: #fff;
+  text-align: center;
+}
+
+.youtube {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .youtube-button {

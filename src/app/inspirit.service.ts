@@ -8,7 +8,7 @@ export class InspiritService {
   apiUrl: string = 'https://api.unsplash.com/photos/random';
   clientID: string = 'y_3z3WhDc7C_SPHhZoOuYWwWEPV-zAtJb9P6IxLXE8Q';
   // unsplash^^^
-  youtubeKey: string = 'AIzaSyCHCNU93rxTqjzU0ljej9vxQztHFIJZjgc';
+  youtubeKey: string = 'AIzaSyADoCXwaBKkRWtSWdtALAcnLbiduwxTaN8';
   youtubeUrl: string = 'https://www.googleapis.com/youtube/v3/search';
   databaseUrl: string = 'http://localhost:3000';
   feelings: string[] = [];
@@ -44,21 +44,21 @@ export class InspiritService {
   getSelected = (selectedFeeling: any): any => {
     return this.http.get(`${this.databaseUrl}/selected`, {
       params: {
-        selectedFeeling: selectedFeeling
-      }
+        selectedFeeling: selectedFeeling,
+      },
     });
   };
 
-  // getYoutube = (searchTerm: string): any => {
-  //   return this.http.get(this.youtubeUrl, {
-  //     params: {
-  //       key: this.youtubeKey,
-  //       part: 'snippet',
-  //       maxResults: '1',
-  //       q: searchTerm,
-  //     },
-  //   });
-  // };
+  getYoutube = (searchTerm: string): any => {
+    return this.http.get(this.youtubeUrl, {
+      params: {
+        key: this.youtubeKey,
+        part: 'snippet',
+        maxResults: '1',
+        q: searchTerm,
+      },
+    });
+  };
 
   setUserName = (name: string) => {
     this.name = name;
