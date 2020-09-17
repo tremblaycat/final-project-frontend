@@ -4,11 +4,11 @@
     Hi {{ name }}, because you're feeling {{ feelingsArray[0] }},
     {{ feelingsArray[1] }}, and {{ feelingsArray[2] }}...
   </p>
-  <div>
+  <div class="img-container">
     <img class="landscape" src="{{ randomPhoto?.urls.full }}" alt="landscape" />
-    <p>"{{selectedResults.quote}}"</p>
-    <p>-{{selectedResults.author}}</p>
-    <button class="add">+</button>
+    <p class="quote">"{{ selectedResults.quote }}"</p>
+    <p>-{{ selectedResults.author }}</p>
+    <!-- <button class="add">+</button> -->
   </div>
 </section>
 
@@ -18,11 +18,11 @@
       Recommendations ▼
     </button>
   </div>
-  <div *ngIf="!isCollapsed">
+  <div *ngIf="!isCollapsed" class="recommendations-container">
     <ol class="list">
-      <li>{{selectedResults.physicalactivity}}</li>
-      <li>{{selectedResults.selfcareactivity}}</li>
-      <li>{{selectedResults.socialactivity}}</li>
+      <li>{{ selectedResults.physicalactivity }}</li>
+      <li>{{ selectedResults.selfcareactivity }}</li>
+      <li>{{ selectedResults.socialactivity }}</li>
     </ol>
   </div>
   <section class="youtube">

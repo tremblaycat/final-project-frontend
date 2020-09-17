@@ -2,7 +2,12 @@
   display: flex;
   justify-content: center;
   margin: 20px;
+  margin-bottom: 0;
   font-family: "Merienda One", cursive;
+}
+
+.title {
+  font-size: 60px;
 }
 
 .nav {
@@ -77,5 +82,5 @@
 
 .button {
   border: none;
-  background-color: none;
+  background-color: #8eb897;
 }
