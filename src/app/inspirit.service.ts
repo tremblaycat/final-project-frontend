@@ -42,7 +42,11 @@ export class InspiritService {
   };
 
   getSelected = (selectedFeeling: any): any => {
-    return this.http.get(`${this.databaseUrl}/selected`, selectedFeeling);
+    return this.http.get(`${this.databaseUrl}/selected`, {
+      params: {
+        selectedFeeling: selectedFeeling
+      }
+    });
   };
 
   // getYoutube = (searchTerm: string): any => {

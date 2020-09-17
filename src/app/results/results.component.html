@@ -1,5 +1,4 @@
 <app-header></app-header>
-
 <section class="result">
   <p>
     Hi {{ name }}, because you're feeling {{ feelingsArray[0] }},
@@ -7,8 +6,8 @@
   </p>
   <div>
     <img class="landscape" src="{{ randomPhoto?.urls.full }}" alt="landscape" />
-    <p>"{{ quoteResults[0]?.quote }}"</p>
-    <p>-{{ quoteResults[0]?.author }}</p>
+    <p>"{{selectedResults.quote}}"</p>
+    <p>-{{selectedResults.author}}</p>
     <button class="add">+</button>
   </div>
 </section>
@@ -21,9 +20,9 @@
   </div>
   <div *ngIf="!isCollapsed">
     <ol class="list">
-      <li>{{ quoteResults[0].physicalactivity }}</li>
-      <li>{{ quoteResults[0].selfcareactivity }}</li>
-      <li>{{ quoteResults[0].socialactivity }}</li>
+      <li>{{selectedResults.physicalactivity}}</li>
+      <li>{{selectedResults.selfcareactivity}}</li>
+      <li>{{selectedResults.socialactivity}}</li>
     </ol>
   </div>
   <section class="youtube">

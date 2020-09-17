@@ -30,11 +30,11 @@ export class ResultsComponent implements OnInit {
     this.getPhoto();
     this.getQuotes();
     this.getSelected();
-    this.feelingsArray = this.service.getFeelings();
-    this.getRandomFeeling();
     this.name = this.service.getName();
     console.log(this.name);
   }
+
+  
 
   getPhoto = (): any => {
     this.service.getUnsplash().subscribe((response) => {
@@ -51,20 +51,16 @@ export class ResultsComponent implements OnInit {
   };
 
   getSelected = (): any => {
+    this.getRandomFeeling();
     this.service.getSelected(this.selectedFeeling).subscribe((response) => {
-      this.selectedResults = response;
-      console.log(this.selectedResults);
+      this.selectedResults = response[0];
+      console.log(response[0]);
     });
   };
 
-  // getFeelingQuote=(selectedFeeling:string): any => {
-  //   let databaseInfo=this.service.getQuotes();
-  //   let results=databaseInfo.filter(selectedFeeling)
-  //   let randomNumber = Math.floor(Math.random() * this.databaseInfo.length)
-
-  // }
 
   getRandomFeeling = () => {
+    this.feelingsArray = this.service.getFeelings();
     let randomNumber = Math.floor(Math.random() * this.feelingsArray.length);
     console.log(this.feelingsArray[randomNumber]);
     this.selectedFeeling = this.feelingsArray[randomNumber];
