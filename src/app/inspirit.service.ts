@@ -33,6 +33,16 @@ export class InspiritService {
     });
   };
 
+  getUnsplashStream = () => {
+    return this.http.get(this.apiUrl, {
+      params: {
+        client_id: this.clientID,
+        collections: '827743',
+        count: '20',
+      },
+    });
+  };
+
   getPhoto() {
     return this.http.get(`${this.apiUrl}`);
   }

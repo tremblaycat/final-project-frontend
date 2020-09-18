@@ -13,6 +13,12 @@
   box-shadow: 1px 5px 10px 5px #363636;
 }
 
+.img-container {
+  background-color: white;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+}
+
 @media only screen and (min-width: 768px) {
 }
 @media only screen and (min-width: 1024px) {
