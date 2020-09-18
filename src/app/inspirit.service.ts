@@ -13,6 +13,7 @@ export class InspiritService {
   databaseUrl: string = 'http://localhost:3000';
   feelings: string[] = [];
   name: string;
+  saved: any = [];
   constructor(private http: HttpClient) {}
 
   getFeelings = () => {
@@ -81,5 +82,14 @@ export class InspiritService {
 
   getName = () => {
     return this.name;
+  };
+
+  getSaved = () => {
+    return this.saved;
+  };
+
+  addSaved = (photo, quote) => {
+    let newSave = { photo: photo, quote: quote };
+    this.saved.push(newSave);
   };
 }

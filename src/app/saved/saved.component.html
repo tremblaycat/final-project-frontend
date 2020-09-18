@@ -1,2 +1,11 @@
 <app-header></app-header>
 <p>Your saved inspiration</p>
+<div class="img-container" *ngFor="let save of saved; index as i">
+  <img
+    class="landscape"
+    src="{{ saved.photo[i].photo?.urls.full }}"
+    alt="landscape"
+  />
+  <p class="quote">"{{ quote[i].quote }}"</p>
+  <p>-{{ quote[i].author }}</p>
+</div>

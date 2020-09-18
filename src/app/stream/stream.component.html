@@ -11,5 +11,5 @@
   />
   <p class="quote">"{{ quoteArray[i].quote }}"</p>
   <p>-{{ quoteArray[i].author }}</p>
-  <button>+</button>
+  <button (click)="save(photoArray[0][i], quoteArray[i])">+</button>
 </div>
