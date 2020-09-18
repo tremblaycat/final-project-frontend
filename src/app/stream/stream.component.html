@@ -1,5 +1,8 @@
 <app-header></app-header>
 <h2 class="title">COMMUNITY</h2>
-<div class="saved-container">
-  <div class="saved">Here is where the content goes.</div>
+<div class="img-container" *ngFor="let photo of photoArray">
+  <img class="landscape" src="{{ randomPhoto?.urls.full }}" alt="landscape" />
+  <p class="quote">"{{ quoteResult.id.quote }}"</p>
+  <p>-{{ quoteResult.id.author }}</p>
+  <!-- <button class="add">+</button> -->
 </div>

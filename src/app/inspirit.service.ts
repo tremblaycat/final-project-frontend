@@ -37,9 +37,9 @@ export class InspiritService {
     return this.http.get(`${this.apiUrl}`);
   }
 
-  // getQuotes = (): any => {
-  //   return this.http.get(`${this.databaseUrl}/results`);
-  // };
+  getQuotes = (): any => {
+    return this.http.get(`${this.databaseUrl}/results`);
+  };
 
   getSelected = (selectedFeeling: any): any => {
     return this.http.get(`${this.databaseUrl}/selected`, {

@@ -7,7 +7,7 @@
 }
 
 .title {
-  font-size: 60px;
+  font-size: 3em;
 }
 
 .nav {
@@ -20,7 +20,7 @@
 
 .nav link {
   float: left;
-  font-size: 16px;
+  font-size: 16em;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -32,7 +32,7 @@
   overflow: hidden;
 }
 .dropdown .nav-dropdown {
-  font-size: 10px;
+  font-size: 10em;
   border: none;
   outline: none;
   color: white;
@@ -83,4 +83,9 @@
 .button {
   border: none;
   background-color: #8eb897;
+}
+
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1024px) {
 }

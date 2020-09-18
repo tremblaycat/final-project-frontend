@@ -160,7 +160,7 @@ a {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1em;
   border: 3px solid #8eb897;
   transition: all 0.35s;
 }
@@ -197,4 +197,9 @@ a:hover {
 a:hover + .icon {
   border: 3px solid #fff;
   right: -25%;
+}
+
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1024px) {
 }

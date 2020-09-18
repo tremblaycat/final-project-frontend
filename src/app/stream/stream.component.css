@@ -7,3 +7,13 @@
   justify-content: center;
   background-color: seagreen;
 }
+.landscape {
+  width: 100vw;
+  margin-bottom: 5px;
+  box-shadow: 1px 5px 10px 5px #363636;
+}
+
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1024px) {
+}
