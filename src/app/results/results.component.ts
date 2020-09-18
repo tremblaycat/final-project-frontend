@@ -28,7 +28,7 @@ export class ResultsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPhoto();
-    this.getQuotes();
+    // this.getQuotes();
     this.getSelected();
     this.name = this.service.getName();
     console.log(this.name);
@@ -41,12 +41,12 @@ export class ResultsComponent implements OnInit {
     });
   };
 
-  getQuotes = (): any => {
-    this.service.getQuotes().subscribe((response) => {
-      console.log(response);
-      this.quoteResults = response;
-    });
-  };
+  // getQuotes = (): any => {
+  //   this.service.getQuotes().subscribe((response) => {
+  //     console.log(response);
+  //     this.quoteResults = response;
+  //   });
+  // };
 
   getSelected = (): any => {
     this.getRandomFeeling();
