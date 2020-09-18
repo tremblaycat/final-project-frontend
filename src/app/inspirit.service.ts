@@ -41,6 +41,10 @@ export class InspiritService {
     return this.http.get(`${this.databaseUrl}/results`);
   };
 
+  getStreamQuotes = (): any => {
+    return this.http.get(`${this.databaseUrl}/stream`);
+  };
+
   getSelected = (selectedFeeling: any): any => {
     return this.http.get(`${this.databaseUrl}/selected`, {
       params: {

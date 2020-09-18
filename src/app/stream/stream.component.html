@@ -1,8 +1,11 @@
 <app-header></app-header>
-<h2 class="title">COMMUNITY</h2>
-<div class="img-container" *ngFor="let photo of photoArray">
+<h2 class="title">OTHER INSPIRATIONS</h2>
+<div
+  class="img-container"
+  *ngFor="let quote of quoteArray; let photo; of: photoArray; index as i"
+>
   <img class="landscape" src="{{ randomPhoto?.urls.full }}" alt="landscape" />
-  <p class="quote">"{{ quoteResult.id.quote }}"</p>
-  <p>-{{ quoteResult.id.author }}</p>
+  <p class="quote">"{{ quoteArray[i].quote }}"</p>
+  <p>-{{ quoteArray[i].author }}</p>
   <!-- <button class="add">+</button> -->
 </div>
