@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
     'confused',
     'heartbroken',
     'remorseful',
-    'guilty',
     'spiteful',
     'passionate',
     'joyful',

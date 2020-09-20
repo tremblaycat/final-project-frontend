@@ -3,6 +3,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: 80px;
 }
 
 .name-mobile {
