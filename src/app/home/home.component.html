@@ -1,9 +1,9 @@
 <app-header></app-header>
 
-<section class="home">
-  <section class="home-contents">
+<main class="main">
+  <section class="home">
     <form class="name-mobile">
-      <label for="username">What's your name?</label>
+      <label class="whats-your-name" for="username">What's your name?</label>
       <input
         class="name-input"
         type="text"
@@ -12,18 +12,21 @@
         [(ngModel)]="name"
       />
     </form>
-    <p>How are you feeling? (Choose 3)</p>
-    <div class="btn-container">
-      <button
-        *ngFor="let adjective of adjectives"
-        class="{{ adjective }} glow-on-hover button"
-        (click)="addFeeling(adjective)"
-      >
-        {{ adjective }}
-      </button>
+    <!--  -->
+    <div class="feelings-tracker">
+      <p class="how-are-you">How are you feeling? (Choose 3)</p>
+      <div class="btn-container">
+        <button
+          *ngFor="let adjective of adjectives"
+          class="{{ adjective }} glow-on-hover"
+          (click)="addFeeling(adjective)"
+        >
+          {{ adjective }}
+        </button>
+      </div>
     </div>
+    <!--  -->
     <div class="results-button">
-      <!--  -->
       <button class="results-btn-mobile" (click)="getResults()">
         Get Your Results!
       </button>
@@ -42,7 +45,6 @@
           </div>
         </div>
       </div>
-      <!--  -->
     </div>
   </section>
-</section>
+</main>

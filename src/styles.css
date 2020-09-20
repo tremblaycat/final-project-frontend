@@ -8,5 +8,8 @@ button {
 }
 
 body {
-  background-color: #8eb897;
+  background-color: #3c9dcd;
+  background-image: url("/assets/images/Inspirit.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

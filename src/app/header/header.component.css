@@ -8,6 +8,8 @@
 
 .title {
   font-size: 3em;
+  color: #fc7a1e;
+  text-shadow: 0px 0px 22px white;
 }
 
 .nav {
@@ -76,13 +78,15 @@
 .link {
   padding: 5px;
   text-decoration: none;
-  color: black;
+  color: #fc7a1e;
+  background-color: rgba(255, 255, 255, 0.5);
+
   margin: 0px;
 }
 
 .button {
   border: none;
-  background-color: #8eb897;
+  background-color: #020887;
 }
 
 @media only screen and (min-width: 768px) {

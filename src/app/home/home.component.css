@@ -1,49 +1,59 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .home {
   margin: 25px;
   margin-top: 0;
   padding: 25px;
   background-color: none;
-  width: 75vw;
-  height: 75vw;
-  /* border-radius: 50%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  align-items: center; */
-}
-
-.home-contents {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-.btn-container {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: auto auto auto;
-}
-
 .name-mobile {
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: #3c9dcd;
   padding: 15px;
   text-align: center;
+  width: 100vw;
+}
+
+.whats-your-name {
+  color: #020887;
 }
 
 .name-input {
   border-style: none;
-  border-bottom: solid black 1px;
-  width: 200px;
+  border-bottom: solid #020887 1px;
+  background-color: none;
+  width: 50%;
 }
 
-.button {
-  margin: 5px;
+.feelings-tracker {
+  background-color: #a9dbb0;
+  padding: 10px;
+  width: 100vw;
+}
+
+.how-are-you {
+  color: #020887;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.btn-container {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: auto auto auto;
 }
 
 .results-btn-mobile {
-  background-color: #8eb897;
+  background-color: #fc7a1e;
   border-style: none;
   color: #fff;
   border: 3px solid white;
@@ -53,11 +63,13 @@
 
 /* ------------------------------ */
 .glow-on-hover {
-  width: 100px;
+  width: 75px;
   height: 50px;
+  margin: 5px;
+  font-size: 0.7em;
   border: none;
   outline: none;
-  color: #111;
+  color: #020887;
   background: #fff;
   cursor: pointer;
   position: relative;
