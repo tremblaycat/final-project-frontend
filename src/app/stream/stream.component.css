@@ -1,5 +1,6 @@
 .title {
   text-align: center;
+  color: #fff;
 }
 
 .saved-container {
@@ -15,11 +16,47 @@
 
 .img-container {
   background-color: white;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
   /* padding: 10px; */
+}
+
+.quote {
+  margin-top: 10px;
+}
+
+.author {
+  margin-bottom: 10px;
+}
+
+.add {
+  width: 100%;
+  border-style: none;
+  padding: 15px;
+  color: white;
+  background-color: #fc7a1e;
 }
 
 @media only screen and (min-width: 768px) {
 }
 @media only screen and (min-width: 1024px) {
+  .stream-grid {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+  }
+
+  .landscape {
+    width: 400px;
+  }
+
+  .img-container {
+    width: 500px;
+    border-radius: 20px;
+    margin: 15px;
+  }
+
+  .add {
+  }
 }

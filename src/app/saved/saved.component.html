@@ -1,5 +1,5 @@
 <app-header></app-header>
-<p>Your saved inspiration</p>
+<p clas="title">Your saved inspiration</p>
 <div class="img-container" *ngFor="let save of saved; index as i">
   <img
     class="landscape"
@@ -7,6 +7,6 @@
     alt="landscape"
   />
   <p class="quote">"{{ quote[i].quote }}"</p>
-  <p>-{{ quote[i].author }}</p>
+  <p class="author">-{{ quote[i].author }}</p>
 </div>
 <!-- this is interpolated wrong ^^^^ -->

@@ -1,15 +1,19 @@
 <app-header></app-header>
 <h2 class="title">OTHER INSPIRATIONS</h2>
-<div
-  class="img-container"
-  *ngFor="let quote of quoteArray; let photo; of: photoArray; index as i"
->
-  <img
-    class="landscape"
-    src="{{ photoArray[0][i]?.urls.full }}"
-    alt="landscape"
-  />
-  <p class="quote">"{{ quoteArray[i].quote }}"</p>
-  <p>-{{ quoteArray[i].author }}</p>
-  <button (click)="save(photoArray[0][i], quoteArray[i])">+</button>
+<div class="stream-grid">
+  <div
+    class="img-container"
+    *ngFor="let quote of quoteArray; let photo; of: photoArray; index as i"
+  >
+    <img
+      class="landscape"
+      src="{{ photoArray[0][i]?.urls.full }}"
+      alt="landscape"
+    />
+    <p class="quote">"{{ quoteArray[i].quote }}"</p>
+    <p class="author">-{{ quoteArray[i].author }}</p>
+    <button class="add" (click)="save(photoArray[0][i], quoteArray[i])">
+      +
+    </button>
+  </div>
 </div>

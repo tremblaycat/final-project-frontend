@@ -1,0 +1,30 @@
+.title {
+  text-align: center;
+  color: #fff;
+}
+
+.saved-container {
+  display: flex;
+  justify-content: center;
+  background-color: seagreen;
+}
+.landscape {
+  width: 100vw;
+  margin-bottom: 5px;
+  box-shadow: 1px 5px 10px 5px #363636;
+}
+
+.img-container {
+  background-color: white;
+  margin-bottom: 15px;
+  text-align: center;
+  /* padding: 10px; */
+}
+
+.quote {
+  margin-top: 10px;
+}
+
+.author {
+  margin-bottom: 10px;
+}
