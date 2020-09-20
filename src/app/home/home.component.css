@@ -1,13 +1,4 @@
-.main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .home {
-  margin: 25px;
-  margin-top: 0;
-  padding: 25px;
   background-color: none;
   align-items: center;
   display: flex;
@@ -15,31 +6,29 @@
 }
 
 .name-mobile {
-  background-color: #3c9dcd;
   padding: 15px;
   text-align: center;
-  width: 100vw;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
 }
 
 .whats-your-name {
-  color: #020887;
+  color: #fff;
 }
 
 .name-input {
   border-style: none;
-  border-bottom: solid #020887 1px;
-  background-color: none;
-  width: 50%;
-}
-
-.feelings-tracker {
-  background-color: #a9dbb0;
-  padding: 10px;
-  width: 100vw;
+  border-bottom: solid #fff 1px;
+  background-color: transparent;
+  width: 70%;
+  align-self: center;
+  text-align: center;
+  /* how do we make input text a diff color? */
 }
 
 .how-are-you {
-  color: #020887;
+  color: #fff;
   text-align: center;
   margin: 0;
   margin-bottom: 20px;
@@ -52,13 +41,23 @@
   grid-template-columns: auto auto auto;
 }
 
+.results-button {
+  background-color: #fc7a1e;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0vw;
+  box-shadow: 1px 5px 10px 5px #363636;
+}
+
 .results-btn-mobile {
   background-color: #fc7a1e;
   border-style: none;
   color: #fff;
-  border: 3px solid white;
-  margin: 10px;
-  padding: 10px;
+  font-size: 1.5em;
+  margin: 15px;
+  padding: 5px;
 }
 
 /* ------------------------------ */
@@ -79,22 +78,7 @@
 
 .glow-on-hover:before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    /* #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000 */
-      #f8bfe7,
-    #c5fffe,
-    #d1ffca,
-    #f4ffbe
-  );
+  background: linear-gradient(45deg, #f8bfe7, #c5fffe, #d1ffca, #f4ffbe);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -149,10 +133,9 @@
   }
 }
 /* ------results button-------- */
-
+/* 
 .wrapper {
   position: fixed;
-  /* top: 50%; */
   left: 50%;
   transform: translate(-50%, 80%);
 }
@@ -209,7 +192,7 @@ a:hover {
 a:hover + .icon {
   border: 3px solid #fff;
   right: -25%;
-}
+} */
 
 @media only screen and (min-width: 768px) {
 }

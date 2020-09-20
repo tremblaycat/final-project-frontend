@@ -1,15 +1,22 @@
 .header {
   display: flex;
   justify-content: center;
-  margin: 20px;
-  margin-bottom: 0;
-  font-family: "Merienda One", cursive;
+  width: 100vw;
+  height: 25vw;
+  /* margin: 20px; */
+  /* margin-bottom: 0; */
+  background-color: #3c9dcd;
+  background-image: url("/assets/images/Inspirit.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
   font-size: 3em;
+  margin-left: 10vw;
   color: #fc7a1e;
-  text-shadow: 0px 0px 22px white;
+  text-shadow: 0px 0px 22px #000230;
+  font-family: "Merienda One", cursive;
 }
 
 .nav {
