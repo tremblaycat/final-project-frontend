@@ -119,7 +119,7 @@
 }
 @media only screen and (min-width: 1024px) {
   .header {
-    height: 15vw;
+    height: 15vh;
   }
 
   .title {
