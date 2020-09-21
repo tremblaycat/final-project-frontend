@@ -1,6 +1,10 @@
 .title {
   text-align: center;
   color: #fff;
+  background-color: #3c9dcd;
+  margin: 60px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .saved-container {

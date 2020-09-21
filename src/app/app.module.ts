@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { SavedComponent } from './saved/saved.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SavedComponent } from './saved/saved.component';
     NotFoundComponent,
     HeaderComponent,
     SavedComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -72,7 +72,24 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .landscape {
+    width: 75vw;
+    margin-top: 10px;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    word-wrap: normal;
+    margin: 20px 30px 20px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+  }
 }
+
 @media only screen and (min-width: 1024px) {
   .right-side {
     flex: 1;

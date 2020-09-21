@@ -1,8 +1,11 @@
 <app-header></app-header>
-<p clas="title">Your saved inspiration</p>
+<p *ngIf="!saved.length > 0" class="title">
+  You haven't saved any inspiration yet!
+</p>
 <div class="img-container" *ngFor="let save of saved; index as i">
   <img class="landscape" src="{{ save.photo?.urls.full }}" alt="landscape" />
   <p class="quote">"{{ save.quote.quote }}"</p>
   <p class="author">-{{ save.quote.author }}</p>
 </div>
-<!-- this is interpolated wrong ^^^^ -->
+
+<app-footer></app-footer>

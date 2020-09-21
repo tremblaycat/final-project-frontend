@@ -14,8 +14,9 @@ p {
 body {
   background-image: linear-gradient(#020887, #3c9dcd);
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 100vh;
 }
 .stars {
   background-image: url("/assets/images/InspiritStars.png");
+  height: 100%;
 }

@@ -16,6 +16,7 @@
 
 .whats-your-name {
   color: #a9dbb0;
+  text-shadow: 0px 0px 22px #000230;
 }
 
 .name-input {
@@ -29,6 +30,7 @@
 }
 
 .how-are-you {
+  text-shadow: 0px 0px 18px #000230;
   color: #a9dbb0;
   text-align: center;
   margin: 0;
@@ -60,6 +62,10 @@
   font-size: 1.5em;
   margin: 15px;
   padding: 5px;
+}
+
+.footer {
+  /* display: none; */
 }
 
 /* ------------------------------ */

@@ -8,6 +8,7 @@ import { InspiritService } from '../inspirit.service';
 })
 export class SavedComponent implements OnInit {
   saved: any[] = [];
+  // isHidden: boolean = true;
   constructor(private service: InspiritService) {}
 
   ngOnInit(): void {
@@ -18,4 +19,8 @@ export class SavedComponent implements OnInit {
     this.saved = this.service.saved;
     console.log(this.saved);
   };
+
+  // toggleHide() {
+  //   this.isHidden = !this.isHidden;
+  // }
 }
