@@ -4,10 +4,9 @@
   align-items: center;
   width: 100vw;
   height: 25vw;
-  /* background-color: #3c9dcd;
-  background-image: url("/assets/images/Inspirit.png");
+  /* background-image: url("/assets/images/InspiritStars.png"); */
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .title {
@@ -91,10 +90,26 @@
 
 .button {
   border: none;
-  background-color: #020887;
+  background: none;
+  /* background-color: #020887; */
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    height: 15vw;
+  }
+
+  .title {
+    font-size: 4em;
+    margin-left: 4vw;
+    color: #fc7a1e;
+    text-shadow: 0px 0px 22px #000230;
+    font-family: "Merienda One", cursive;
+  }
+
+  .fa-spa {
+    font-size: 2em;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .header {
