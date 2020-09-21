@@ -11,7 +11,15 @@
 }
 
 .greeting {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  word-wrap: normal;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
 }
 
 .quote {
@@ -40,7 +48,6 @@
 .recommendations-container {
   background-color: #fff;
   margin: 10px;
-
   border-radius: 10px;
   text-align: left;
   word-wrap: normal;
@@ -66,4 +73,55 @@
 @media only screen and (min-width: 768px) {
 }
 @media only screen and (min-width: 1024px) {
+  .right-side {
+    flex: 1;
+    width: auto;
+    margin-left: 200px;
+    margin-right: 80px;
+    align-content: center;
+  }
+
+  .left-side {
+    flex: 1;
+    width: auto;
+    align-content: center;
+  }
+
+  .greeting {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .whole-page {
+    display: flex;
+    justify-content: center;
+  }
+
+  .landscape {
+    width: 35vw;
+    /* bottom: 200px; */
+    transform: translateY(-15%);
+    margin-top: 10px;
+  }
+
+  .img-container {
+    margin: 0;
+  }
+
+  .result {
+    margin-top: 70px;
+    width: 100%;
+    margin-left: 60px;
+  }
+
+  .tips-button {
+    /* width: 50%; */
+  }
+
+  .quote {
+    font-size: 1.5em;
+    word-wrap: normal;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
 }

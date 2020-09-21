@@ -9,6 +9,12 @@
   background-size: cover;
 }
 
+.moon {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 0px 0px 22px #000230;
+}
+
 .title {
   font-size: 3em;
   margin-left: 10vw;
