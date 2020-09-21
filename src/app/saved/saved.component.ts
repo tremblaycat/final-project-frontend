@@ -15,7 +15,7 @@ export class SavedComponent implements OnInit {
   }
 
   getSaved = () => {
-    let saved = this.service.saved;
-    console.log(saved);
+    this.saved = this.service.saved;
+    console.log(this.saved);
   };
 }
