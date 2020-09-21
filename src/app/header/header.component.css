@@ -4,10 +4,10 @@
   align-items: center;
   width: 100vw;
   height: 25vw;
-  background-color: #3c9dcd;
+  /* background-color: #3c9dcd;
   background-image: url("/assets/images/Inspirit.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .title {
