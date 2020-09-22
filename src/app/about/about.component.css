@@ -1,8 +1,7 @@
 .title {
   text-align: center;
   margin: 25px;
-  color: #a9dbb0;
-  font-size: 3em;
+  color: #fff;
 }
 
 .row {
@@ -23,7 +22,7 @@
   align-items: center;
   background-color: #fff;
   padding: 5px;
-  box-shadow: 1px 5px 10px 5px #363636;
+  box-shadow: 1px 5px 10px 5px #172038;
   border-radius: 20px;
 }
 
@@ -36,9 +35,35 @@
 
 .name {
   color: black;
-  text-shadow: 1px 1px 4px #000000;
+  text-shadow: 1px 1px 4px #5a5a5a;
 }
 
 .bio-text {
   text-align: center;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 768px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+  }
 }

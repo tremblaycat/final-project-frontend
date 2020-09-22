@@ -55,6 +55,7 @@
     width: 500px;
     border-radius: 20px;
     margin: 15px;
+    box-shadow: 1px 5px 10px 5px #363636;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -81,6 +82,7 @@
     margin: 15px;
     padding-left: 10px;
     padding-right: 10px;
+    box-shadow: 1px 5px 10px 5px #172038;
   }
 
   .add {
