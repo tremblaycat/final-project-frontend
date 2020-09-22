@@ -39,6 +39,10 @@ export class StreamComponent implements OnInit {
     console.log(photo, quote);
   };
 
+  // addedToSaved = () => {
+
+  // };
+
   // getPhoto = (): any => {
   //   this.service.getUnsplash().subscribe((response) => {
   //     console.log(response);

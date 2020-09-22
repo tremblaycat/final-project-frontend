@@ -69,11 +69,36 @@
 
   .landscape {
     width: 400px;
+    height: 400px;
+    margin: 15px;
+    object-fit: cover;
   }
 
   .img-container {
     width: 500px;
+    height: 600px;
     border-radius: 20px;
     margin: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .add {
+    width: 100%;
+    padding: 0px;
+    color: #fc7a1e;
+    background-color: transparent;
+    position: relative;
+    right: 0;
+    top: 0;
+    outline: 0;
+  }
+
+  .circle-add {
+    font-size: 4em;
+  }
+
+  .add:focus {
+    color: #a9dbb0;
   }
 }
