@@ -23,7 +23,11 @@
   <section class="right-side">
     <section class="recommendations">
       <div>
-        <button (click)="toggleCollapse()" class="tips-button hide">
+        <button
+          (click)="toggleCollapse()"
+          class="tips-button hide"
+          *ngIf="desktop"
+        >
           Recommendations ▼
         </button>
       </div>
@@ -35,7 +39,7 @@
         </ol>
       </div>
       <section class="youtube">
-        <div *ngIf="!isCollapsed" class="video-player hide">
+        <div *ngIf="!isCollapsed" class="video-player">
           <p class="video-text">Check out this video:</p>
           <youtube-player
             videoId="{{ videoResults.items[0].id.videoId }}"

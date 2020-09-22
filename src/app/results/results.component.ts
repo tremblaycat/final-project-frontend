@@ -16,6 +16,7 @@ export class ResultsComponent implements OnInit {
   feelingsArray: any;
   name: string;
   selectedFeeling: string;
+  desktop: boolean;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +33,9 @@ export class ResultsComponent implements OnInit {
     this.getSelected();
     this.name = this.service.getName();
     console.log(this.name);
+    if (window.screen.width >= 1024) {
+      this.desktop = true;
+    }
   }
 
   getPhoto = (): any => {

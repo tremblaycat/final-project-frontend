@@ -32,6 +32,13 @@
 .author {
   margin-bottom: 10px;
 }
+.delete-button {
+  width: 10px;
+  border-style: none;
+  padding: 15px;
+  color: white;
+  background-color: #fc7a1e;
+}
 
 @media only screen and (min-width: 1024px) {
   .stream-grid {

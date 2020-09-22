@@ -7,6 +7,9 @@
     <img class="landscape" src="{{ save.photo?.urls.full }}" alt="landscape" />
     <p class="quote">"{{ save.quote.quote }}"</p>
     <p class="author">-{{ save.quote.author }}</p>
+    <button class="delete-button" (click)="deleteSaved(i)">
+      <span><i class="fas fa-times-circle"></i></span>
+    </button>
   </div>
 </div>
 

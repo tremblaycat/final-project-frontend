@@ -22,6 +22,7 @@
 .name-input {
   border-style: none;
   border-bottom: solid #fff 1px;
+  border-radius: 10px;
   background-color: transparent;
   width: 70%;
   align-self: center;
@@ -158,6 +159,7 @@
 @media only screen and (min-width: 1024px) {
   .home {
     font-size: 1.5em;
+    margin-bottom: 40px;
   }
 
   .glow-on-hover {
@@ -167,5 +169,17 @@
   .btn-container {
     grid-gap: 0px;
     grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 15px;
+  }
+  .results-button {
+    background-color: #fc7a1e;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    box-shadow: 1px 5px 10px 5px #363636;
+    outline: 0;
+    border-radius: 10px;
   }
 }

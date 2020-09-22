@@ -20,6 +20,10 @@ export class SavedComponent implements OnInit {
     console.log(this.saved);
   };
 
+  deleteSaved = (index) => {
+    this.saved.splice(index, 1);
+  };
+
   // toggleHide() {
   //   this.isHidden = !this.isHidden;
   // }
