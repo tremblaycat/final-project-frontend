@@ -22,6 +22,7 @@
           *ngFor="let adjective of adjectives"
           class="{{ adjective }} glow-on-hover"
           (click)="addFeeling(adjective)"
+          [disabled]="length === 3"
         >
           {{ adjective }}
         </button>

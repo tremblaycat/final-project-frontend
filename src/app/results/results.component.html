@@ -14,8 +14,8 @@
           src="{{ randomPhoto?.urls.full }}"
           alt="landscape"
         />
-        <p class="quote">"{{ selectedResults.quote }}"</p>
-        <p class="author">-{{ selectedResults.author }}</p>
+        <p class="quote">"{{ selectedResults?.quote }}"</p>
+        <p class="author">-{{ selectedResults?.author }}</p>
       </div>
     </section>
   </section>
@@ -23,11 +23,7 @@
   <section class="right-side">
     <section class="recommendations">
       <div>
-        <button
-          (click)="toggleCollapse()"
-          class="tips-button hide"
-          *ngIf="desktop"
-        >
+        <button (click)="toggleCollapse()" class="tips-button hide">
           Recommendations ▼
         </button>
       </div>

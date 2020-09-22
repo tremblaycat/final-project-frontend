@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit {
     'inspired',
   ];
   feelingsArray: any = [];
-
   name: string;
 
   constructor(private service: InspiritService, private router: Router) {}

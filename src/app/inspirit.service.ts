@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -5,10 +6,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class InspiritService {
+  private readonly BASE_URL = environment.apiBaseUrl;
   apiUrl: string = 'https://api.unsplash.com/photos/random';
   clientID: string = 'iKevvcDauVZXBrlQ1HZg_DKN-naujnI7zD_5ZcVu-JU';
   // unsplash^^^
-  youtubeKey: string = 'AIzaSyADoCXwaBKkRWtSWdtALAcnLbiduwxTaN8';
+  youtubeKey: string = 'AIzaSyBbHtzOLdUDWwkNFIY4C_0dql7ANSISraE';
   youtubeUrl: string = 'https://www.googleapis.com/youtube/v3/search';
   databaseUrl: string = 'http://localhost:3000';
   feelings: string[] = [];
@@ -49,15 +51,15 @@ export class InspiritService {
   }
 
   getQuotes = (): any => {
-    return this.http.get(`${this.databaseUrl}/results`);
+    return this.http.get(`${this.BASE_URL}/results`);
   };
 
   getStreamQuotes = (): any => {
-    return this.http.get(`${this.databaseUrl}/stream`);
+    return this.http.get(`${this.BASE_URL}/stream`);
   };
 
   getSelected = (selectedFeeling: any): any => {
-    return this.http.get(`${this.databaseUrl}/selected`, {
+    return this.http.get(`${this.BASE_URL}/selected`, {
       params: {
         selectedFeeling: selectedFeeling,
       },
