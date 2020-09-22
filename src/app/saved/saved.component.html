@@ -1,5 +1,5 @@
 <app-header></app-header>
-<p *ngIf="!saved.length > 0" class="title">
+<p *ngIf="saved.length === 0" class="title">
   You haven't saved any inspiration yet!
 </p>
 <div class="img-container" *ngFor="let save of saved; index as i">
