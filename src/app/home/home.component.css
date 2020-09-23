@@ -6,6 +6,10 @@
   margin-bottom: 80px;
 }
 
+.disabled {
+  display: none;
+}
+
 .name-mobile {
   padding: 15px;
   text-align: center;

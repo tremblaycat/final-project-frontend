@@ -23,8 +23,10 @@ export class InspiritService {
   };
 
   addToFeelings = (feeling: string) => {
-    this.feelings.push(feeling);
-    console.log(this.feelings);
+    if (this.feelings.length < 3) {
+      this.feelings.push(feeling);
+      console.log(this.feelings);
+    }
   };
 
   getUnsplash = () => {
@@ -91,7 +93,15 @@ export class InspiritService {
   };
 
   addSaved = (photo, quote) => {
-    let newSave = { photo: photo, quote: quote };
-    this.saved.push(newSave);
+    let newSave = { photo: photo, quote: quote, isFavorite: true };
+    if (!this.checkDuplicate(newSave)) {
+      this.saved.push(newSave);
+    }
+  };
+
+  checkDuplicate = (favorite: any) => {
+    return this.saved.some((item) => {
+      return item.quote.quote === favorite.quote.quote;
+    });
   };
 }

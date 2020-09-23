@@ -100,7 +100,7 @@
     font-size: 4em;
   }
 
-  .add:focus {
+  .favorite {
     color: #a9dbb0;
   }
 }

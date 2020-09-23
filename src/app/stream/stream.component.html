@@ -12,7 +12,11 @@
     />
     <p class="quote">"{{ quoteArray[i].quote }}"</p>
     <p class="author">-{{ quoteArray[i].author }}</p>
-    <button class="add" (click)="save(photoArray[0][i], quoteArray[i])">
+    <button
+      class="add"
+      [ngClass]="{ favorite: quote.favorite === true }"
+      (click)="save(photoArray[0][i], quoteArray[i])"
+    >
       <span class="circle-add"><i class="fas fa-plus-circle"></i></span>
     </button>
   </div>

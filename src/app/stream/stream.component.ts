@@ -12,11 +12,13 @@ export class StreamComponent implements OnInit {
   randomQuote: any;
   photoArray: any[] = [];
   quoteArray: any[] = [];
+  favorites: any[] = [];
   constructor(private service: InspiritService) {}
 
   ngOnInit(): void {
     this.getQuotes();
     this.getPhoto();
+    this.favorites = this.service.getSaved();
   }
 
   getQuotes = (): any => {
@@ -37,30 +39,10 @@ export class StreamComponent implements OnInit {
   save = (photo, quote) => {
     this.service.addSaved(photo, quote);
     console.log(photo, quote);
+    this.favorites.some((item) => {
+      if (item.quote.quote === quote.quote) {
+        quote.favorite = true;
+      }
+    });
   };
-
-  // addedToSaved = () => {
-
-  // };
-
-  // getPhoto = (): any => {
-  //   this.service.getUnsplash().subscribe((response) => {
-  //     console.log(response);
-  //     this.randomPhoto = response;
-  //     this.photoArray.push(this.randomPhoto);
-  //     console.log(this.photoArray);
-  //   });
-  // };
-  // getQuote = (): any => {
-  //   this.service.getQuotes().subscribe((response) => {
-  //     console.log(response);
-
-  //     this.quoteArray = response;
-  //     let randomNumber = Math.floor(Math.random() * this.quoteResult.length);
-  //     let randomQuote = this.quoteResult[randomNumber];
-  //     this.quoteArray.push(this.randomQuote);
-  //     console.log(randomNumber);
-  //     console.log(this.quoteArray);
-  //   });
-  // };
 }
