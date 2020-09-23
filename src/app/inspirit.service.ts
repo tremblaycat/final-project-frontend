@@ -8,9 +8,11 @@ import { HttpClient } from '@angular/common/http';
 export class InspiritService {
   private readonly BASE_URL = environment.apiBaseUrl;
   apiUrl: string = 'https://api.unsplash.com/photos/random';
-  clientID: string = 'iKevvcDauVZXBrlQ1HZg_DKN-naujnI7zD_5ZcVu-JU';
+  // clientID: string = 'iKevvcDauVZXBrlQ1HZg_DKN-naujnI7zD_5ZcVu-JU';
+  clientID: string = 'y_3z3WhDc7C_SPHhZoOuYWwWEPV-zAtJb9P6IxLXE8Q';
   // unsplash^^^
-  youtubeKey: string = 'AIzaSyBbHtzOLdUDWwkNFIY4C_0dql7ANSISraE';
+  // youtubeKey: string = 'AIzaSyBbHtzOLdUDWwkNFIY4C_0dql7ANSISraE';
+  youtubeKey: string = 'AIzaSyCHCNU93rxTqjzU0ljej9vxQztHFIJZjgc';
   youtubeUrl: string = 'https://www.googleapis.com/youtube/v3/search';
   databaseUrl: string = 'http://localhost:3000';
   feelings: string[] = [];

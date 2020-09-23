@@ -15,6 +15,7 @@ export class ResultsComponent implements OnInit {
   selectedResults: any;
   feelingsArray: any;
   name: string;
+  nameText: string = 'friend';
   selectedFeeling: string;
   desktop: boolean;
 
@@ -36,6 +37,7 @@ export class ResultsComponent implements OnInit {
     if (window.screen.width >= 1024) {
       this.desktop = true;
     }
+    this.spaceRemover();
   }
 
   getPhoto = (): any => {
@@ -43,6 +45,12 @@ export class ResultsComponent implements OnInit {
       console.log(response);
       this.randomPhoto = response;
     });
+  };
+
+  spaceRemover = () => {
+    if (this.name === undefined) {
+      this.name = this.nameText;
+    }
   };
 
   // getQuotes = (): any => {

@@ -49,7 +49,7 @@
 
 .recommendations-container {
   background-color: #fff;
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 10px;
   text-align: left;
   word-wrap: normal;
@@ -71,6 +71,7 @@
 .youtube-button {
   width: 100%;
 }
+
 .youtube-player {
   height: 480px;
   width: 854px;
@@ -99,10 +100,10 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    width: auto;
-    margin-left: 200px;
-    margin-right: 80px;
-    align-content: center;
+  }
+
+  .recommendations {
+    padding: 25px;
   }
 
   .left-side {
@@ -111,9 +112,15 @@
     align-content: center;
   }
 
+  .recommendations-container {
+    margin: 15px;
+    width: 91%;
+  }
+
   .greeting {
     font-size: 1.5em;
     margin-bottom: 15px;
+    padding: 50px;
   }
 
   .whole-page {
@@ -122,9 +129,11 @@
   }
 
   .landscape {
+    height: 35vh;
     width: 35vw;
     transform: translateY(-15%);
     margin-top: 10px;
+    object-fit: cover;
   }
 
   .img-container {
@@ -133,8 +142,10 @@
 
   .result {
     margin-top: 100px;
+  }
+
+  .recommendations {
     width: 100%;
-    margin-left: 60px;
   }
 
   .quote {
@@ -148,5 +159,27 @@
 
   .author {
     margin-bottom: 25px;
+  }
+
+  .tips-button {
+    margin: 15px;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .youtube {
+    margin-right: 5px;
+  }
+
+  .video-text {
+    margin: 15px;
+    text-align: center;
+    width: 90%;
+    font-size: 1.5em;
+    border-style: none;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    background-color: #fc7a1e;
   }
 }
