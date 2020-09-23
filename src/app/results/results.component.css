@@ -42,7 +42,8 @@
   width: 100%;
   font-size: 1.5em;
   border-style: none;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: white;
   background-color: #fc7a1e;
 }
@@ -60,7 +61,7 @@
 .video-text {
   color: #fff;
   text-align: center;
-  margin: 15px;
+  /* margin: 15px; */
 }
 
 .youtube {
@@ -74,10 +75,10 @@
   width: 100%;
 }
 
-.youtube-player {
+/* .youtube-player {
   height: 240px;
   width: 426px;
-}
+} */
 
 @media only screen and (min-width: 768px) {
   .landscape {
@@ -99,10 +100,10 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .youtube-player {
+  /* .youtube-player {
     height: 240px;
     width: 400px;
-  }
+  } */
 
   .right-side {
     flex: 1;
