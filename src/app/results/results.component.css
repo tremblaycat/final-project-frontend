@@ -54,11 +54,13 @@
   text-align: left;
   word-wrap: normal;
   padding: 10px;
+  margin: 10px;
 }
 
 .video-text {
   color: #fff;
   text-align: center;
+  margin: 15px;
 }
 
 .youtube {
@@ -73,8 +75,8 @@
 }
 
 .youtube-player {
-  height: 480px;
-  width: 854px;
+  height: 240px;
+  width: 400px;
 }
 @media only screen and (min-width: 768px) {
   .landscape {
