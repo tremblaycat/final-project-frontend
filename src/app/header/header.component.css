@@ -8,9 +8,17 @@ a {
   align-items: center;
   width: 100vw;
   height: 25vw;
-  /* background-image: url("/assets/images/InspiritStars.png"); */
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.menu {
+  font-size: 1.5em;
+  color: #a9dbb0;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  text-shadow: 0px 0px 22px #000230;
 }
 
 .moon {
@@ -30,7 +38,6 @@ a {
 
 .nav {
   overflow: hidden;
-  font-family: Arial;
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -50,7 +57,6 @@ a {
   overflow: hidden;
 }
 .dropdown .nav-dropdown {
-  font-size: 10em;
   border: none;
   outline: none;
   color: white;
@@ -68,6 +74,8 @@ a {
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 10px;
+  right: 10px;
   background-color: none;
   min-width: 160px;
   z-index: 1;
