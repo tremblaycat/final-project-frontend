@@ -76,8 +76,9 @@
 
 .youtube-player {
   height: 240px;
-  width: 400px;
+  width: 426px;
 }
+
 @media only screen and (min-width: 768px) {
   .landscape {
     width: 75vw;
@@ -98,6 +99,11 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .youtube-player {
+    height: 240px;
+    width: 400px;
+  }
+
   .right-side {
     flex: 1;
     display: flex;
