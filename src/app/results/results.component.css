@@ -38,9 +38,10 @@
 }
 
 .tips-button {
+  text-align: center;
   width: 100%;
+  font-size: 1.5em;
   border-style: none;
-  /* border: solid #fff 3px; */
   padding: 15px;
   color: white;
   background-color: #fc7a1e;
@@ -70,6 +71,10 @@
 .youtube-button {
   width: 100%;
 }
+.youtube-player {
+  height: 480px;
+  width: 854px;
+}
 @media only screen and (min-width: 768px) {
   .landscape {
     width: 75vw;
@@ -92,6 +97,8 @@
 @media only screen and (min-width: 1024px) {
   .right-side {
     flex: 1;
+    display: flex;
+    justify-content: center;
     width: auto;
     margin-left: 200px;
     margin-right: 80px;
@@ -116,7 +123,6 @@
 
   .landscape {
     width: 35vw;
-    /* bottom: 200px; */
     transform: translateY(-15%);
     margin-top: 10px;
   }
@@ -129,10 +135,6 @@
     margin-top: 100px;
     width: 100%;
     margin-left: 60px;
-  }
-
-  .tips-button {
-    /* width: 50%; */
   }
 
   .quote {

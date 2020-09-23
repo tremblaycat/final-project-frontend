@@ -6,7 +6,7 @@
   </p>
 </div>
 <main class="whole-page">
-  <section class="left side">
+  <section class="left-side">
     <section class="result">
       <div class="img-container">
         <img
@@ -23,11 +23,9 @@
   <section class="right-side">
     <section class="recommendations">
       <div>
-        <button (click)="toggleCollapse()" class="tips-button hide">
-          Recommendations ▼
-        </button>
+        <div class="tips-button">Heres some recommendations for you:</div>
       </div>
-      <div *ngIf="!isCollapsed" class="recommendations-container">
+      <div class="recommendations-container">
         <ol class="list">
           <li>{{ selectedResults.physicalactivity }}</li>
           <li>{{ selectedResults.selfcareactivity }}</li>
@@ -35,13 +33,12 @@
         </ol>
       </div>
       <section class="youtube">
-        <div *ngIf="!isCollapsed" class="video-player">
+        <div class="video-player">
           <p class="video-text">Check out this video:</p>
           <youtube-player
+            class="youtube-player"
             videoId="{{ videoResults.items[0].id.videoId }}"
             suggestedQuality="highres"
-            [height]="170"
-            [width]="230"
           >
           </youtube-player>
 
