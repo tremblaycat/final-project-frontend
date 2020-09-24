@@ -23,13 +23,10 @@ export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
   name: string;
   nameText: string = 'friend';
   selectedFeeling: string;
-<<<<<<< HEAD
   desktop: boolean;
   photoArray: any[] = [];
   quoteArray: any[] = [];
   favorites: any[] = [];
-=======
->>>>>>> b6a4d8b3cac20961a691f308eae22db08b424898
   @ViewChild('demoYouTubePlayer') demoYouTubePlayer: ElementRef<HTMLDivElement>;
   videoWidth: number | undefined;
   videoHeight: number | undefined;
@@ -62,7 +59,6 @@ export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   //YouTube end
 
-<<<<<<< HEAD
   save = (photo, quote) => {
     this.service.addSaved(photo, quote);
     console.log(photo, quote);
@@ -73,8 +69,6 @@ export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   };
 
-=======
->>>>>>> b6a4d8b3cac20961a691f308eae22db08b424898
   ngOnInit(): void {
     this.getPhoto();
     this.getSelected();
