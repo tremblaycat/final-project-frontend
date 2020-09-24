@@ -37,6 +37,22 @@
   margin-top: 10px;
 }
 
+.add {
+  font-size: 2em;
+  width: 100%;
+  padding: 0px;
+  color: #fc7a1e;
+  background-color: transparent;
+  position: relative;
+  right: 0;
+  top: 0;
+  outline: 0;
+}
+
+.add:active {
+  color: #a9dbb0;
+}
+
 .tips-header {
   text-align: center;
   width: 100%;
@@ -142,6 +158,10 @@
 
   .img-container {
     margin: 0;
+  }
+
+  .add {
+    font-size: 4em;
   }
 
   .landscape {
