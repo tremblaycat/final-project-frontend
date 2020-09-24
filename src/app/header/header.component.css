@@ -45,7 +45,6 @@ a {
 
 .nav link {
   float: left;
-  font-size: 16em;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -85,7 +84,6 @@ a {
   color: #fff;
   background-color: #3c9dcd;
   border-radius: 5px;
-  text-shadow: 0px 0px 22px #000230;
 }
 
 .dropdown-content link {
@@ -153,6 +151,16 @@ a {
   }
 
   .menu {
-    font-size: 3em;
+    font-size: 4em;
+    top: 10px;
+    right: 20px;
+  }
+
+  .dropdown-content {
+    margin-top: 60px;
+  }
+
+  .link {
+    font-size: 1.5em;
   }
 }
