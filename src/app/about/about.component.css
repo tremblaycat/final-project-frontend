@@ -44,15 +44,15 @@
   padding: 20px;
 }
 
+.icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .icon {
   width: 25px;
   height: 25px;
   margin: 5px;
-}
-
-.icon-container {
-  display: flex;
-  flex-direction: row;
 }
 
 @media only screen and (min-width: 768px) {

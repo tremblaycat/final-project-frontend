@@ -1,15 +1,3 @@
-.result {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  word-wrap: normal;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: #fff;
-  padding: 10px;
-}
-
 .greeting {
   display: flex;
   flex-direction: column;
@@ -22,12 +10,16 @@
   padding: 10px;
 }
 
-.quote {
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 10px;
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  word-wrap: normal;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
 }
 
 .landscape {
@@ -37,7 +29,15 @@
   border-radius: 10px;
 }
 
-.tips-button {
+.quote {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.tips-header {
   text-align: center;
   width: 100%;
   font-size: 1.5em;
@@ -50,7 +50,6 @@
 
 .recommendations-container {
   background-color: #fff;
-  /* margin: 10px; */
   border-radius: 10px;
   text-align: left;
   word-wrap: normal;
@@ -70,6 +69,10 @@
   margin-bottom: 10px;
 }
 
+.youtube-button {
+  width: 100%;
+}
+
 .youtube {
   display: flex;
   flex-direction: column;
@@ -77,21 +80,7 @@
   align-items: center;
 }
 
-.youtube-button {
-  width: 100%;
-}
-
-/* .youtube-player {
-  height: 240px;
-  width: 426px;
-} */
-
 @media only screen and (min-width: 768px) {
-  .landscape {
-    width: 75vw;
-    margin-top: 10px;
-  }
-
   .result {
     display: flex;
     flex-direction: column;
@@ -103,33 +92,14 @@
     background-color: #fff;
     padding: 10px;
   }
+
+  .landscape {
+    width: 75vw;
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  .right-side {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  .recommendations {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 25px;
-    align-items: center;
-  }
-
-  .left-side {
-    flex: 1;
-    width: auto;
-  }
-
-  .recommendations-container {
-    margin: 15px;
-    width: 96.5%;
-  }
-
   .greeting {
     font-size: 1.5em;
     margin-bottom: 15px;
@@ -141,24 +111,45 @@
     justify-content: center;
   }
 
-  .landscape {
-    height: 35vh;
-    width: 35vw;
-    transform: translateY(-15%);
-    margin-top: 10px;
-    object-fit: cover;
+  .right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }
 
-  .img-container {
-    margin: 0;
+  .left-side {
+    flex: 1;
+    width: auto;
+  }
+
+  .right-side-recommendations {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 25px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .recommendations-container {
+    margin: 15px;
+    width: 96.5%;
   }
 
   .result {
     margin-top: 100px;
   }
 
-  .recommendations {
-    width: 100%;
+  .img-container {
+    margin: 0;
+  }
+
+  .landscape {
+    height: 35vh;
+    width: 35vw;
+    transform: translateY(-15%);
+    margin-top: 10px;
+    object-fit: cover;
   }
 
   .quote {
@@ -174,7 +165,13 @@
     margin-bottom: 25px;
   }
 
-  .tips-button {
+  .tips-header {
+    margin: 15px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .video-text {
     margin: 15px;
     width: 100%;
     border-radius: 10px;
@@ -182,11 +179,5 @@
 
   .youtube {
     margin-right: 5px;
-  }
-
-  .video-text {
-    margin: 15px;
-    width: 100%;
-    border-radius: 10px;
   }
 }

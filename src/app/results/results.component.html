@@ -24,13 +24,13 @@
   </section>
 
   <section class="right-side">
-    <section class="recommendations">
-      <div class="tips-button">Recommendations:</div>
+    <section class="right-side-recommendations">
+      <div class="tips-header">Recommendations:</div>
       <div class="recommendations-container">
         <ol class="list">
-          <li>{{ selectedResults.physicalactivity }}</li>
-          <li>{{ selectedResults.selfcareactivity }}</li>
-          <li>{{ selectedResults.socialactivity }}</li>
+          <li>{{ selectedResults?.physicalactivity }}</li>
+          <li>{{ selectedResults?.selfcareactivity }}</li>
+          <li>{{ selectedResults?.socialactivity }}</li>
         </ol>
       </div>
       <div #demoYouTubePlayer class="video-text">
@@ -40,27 +40,12 @@
         <div class="video-player">
           <youtube-player
             class="youtube-player"
-            videoId="{{ videoResults.items[0].id.videoId }}"
+            videoId="{{ videoResults?.items[0].id.videoId }}"
             suggestedQuality="highres"
             [height]="videoHeight"
             [width]="videoWidth"
           >
           </youtube-player>
-
-          <!-- <youtube-player
-            videoId="{{ videoResults.items[1].id.videoId }}"
-            suggestedQuality="highres"
-            [height]="250"
-            [width]="500"
-          >
-          </youtube-player>
-          <youtube-player
-            videoId="{{ videoResults.items[2].id.videoId }}"
-            suggestedQuality="highres"
-            [height]="250"
-            [width]="500"
-          >
-          </youtube-player> -->
         </div>
       </section>
     </section>
