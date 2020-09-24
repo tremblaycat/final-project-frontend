@@ -72,14 +72,20 @@ a {
 }
 
 .dropdown-content {
+  text-align: right;
+  margin-top: 20px;
   display: none;
   position: absolute;
   top: 10px;
   right: 10px;
   background-color: none;
-  min-width: 160px;
+  min-width: 120px;
   z-index: 1;
   outline: 0;
+  color: #fff;
+  background-color: #3c9dcd;
+  border-radius: 5px;
+  text-shadow: 0px 0px 22px #000230;
 }
 
 .dropdown-content link {
@@ -103,8 +109,6 @@ a {
 .link {
   padding: 5px;
   text-decoration: none;
-  color: #fc7a1e;
-  background-color: rgba(255, 255, 255, 0.5);
   margin: 0px;
 }
 
@@ -138,7 +142,7 @@ a {
 
   .title {
     font-size: 6em;
-    margin-left: 5vw;
+    margin-left: 4vw;
     color: #fc7a1e;
     text-shadow: 0px 0px 22px #000230;
     font-family: "Merienda One", cursive;
@@ -146,5 +150,9 @@ a {
 
   .fa-cloud-moon {
     font-size: 2em;
+  }
+
+  .menu {
+    font-size: 3em;
   }
 }

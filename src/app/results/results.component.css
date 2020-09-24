@@ -59,9 +59,15 @@
 }
 
 .video-text {
-  color: #fff;
   text-align: center;
-  /* margin: 15px; */
+  width: 100%;
+  font-size: 1.5em;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  background-color: #fc7a1e;
+  margin-bottom: 10px;
 }
 
 .youtube {
@@ -100,11 +106,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  /* .youtube-player {
-    height: 240px;
-    width: 400px;
-  } */
-
   .right-side {
     flex: 1;
     display: flex;
@@ -113,17 +114,17 @@
 
   .recommendations {
     padding: 25px;
+    align-items: center;
   }
 
   .left-side {
     flex: 1;
     width: auto;
-    align-content: center;
   }
 
   .recommendations-container {
     margin: 15px;
-    width: 91%;
+    width: 96.5%;
   }
 
   .greeting {
@@ -172,7 +173,7 @@
 
   .tips-button {
     margin: 15px;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
   }
 
@@ -182,13 +183,7 @@
 
   .video-text {
     margin: 15px;
-    text-align: center;
-    width: 90%;
-    font-size: 1.5em;
-    border-style: none;
-    padding: 15px;
-    color: white;
+    width: 100%;
     border-radius: 10px;
-    background-color: #fc7a1e;
   }
 }

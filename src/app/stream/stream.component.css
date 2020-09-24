@@ -76,8 +76,12 @@
   }
 
   .img-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 500px;
-    height: 600px;
+    height: 650px;
     border-radius: 20px;
     margin: 15px;
     padding-left: 10px;

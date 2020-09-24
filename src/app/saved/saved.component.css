@@ -22,6 +22,7 @@
   background-color: white;
   margin-bottom: 15px;
   text-align: center;
+  box-shadow: 1px 5px 10px 5px #172038;
   /* padding: 10px; */
 }
 
@@ -59,11 +60,16 @@
 
   .img-container {
     width: 500px;
-    height: 600px;
+    height: 650px;
     border-radius: 20px;
     margin: 15px;
     padding-left: 10px;
     padding-right: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1px 5px 10px 5px #172038;
   }
 
   .delete-button {
