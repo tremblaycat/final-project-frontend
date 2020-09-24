@@ -3,17 +3,7 @@
   You haven't saved any inspiration yet!
 </p>
 <div class="stream-grid">
-  <div
-    class="img-container"
-    *ngFor="
-      let save of saved;
-      let quote;
-      of: quoteArray;
-      let photo;
-      of: photoArray;
-      index as i
-    "
-  >
+  <div class="img-container" *ngFor="let save of saved; index as i">
     <img class="landscape" src="{{ save.photo?.urls.full }}" alt="landscape" />
     <p class="quote">"{{ save.quote.quote }}"</p>
     <p class="author">-{{ save.quote.author }}</p>
