@@ -24,6 +24,7 @@
   padding: 5px;
   box-shadow: 1px 5px 10px 5px #172038;
   border-radius: 20px;
+  justify-content: space-between;
 }
 
 .img {
@@ -40,6 +41,7 @@
 
 .bio-text {
   text-align: center;
+  padding: 20px;
 }
 
 .icon {
@@ -65,5 +67,10 @@
     width: 60px;
     height: 60px;
     margin: 10px;
+  }
+
+  .img {
+    height: 400px;
+    width: 400px;
   }
 }

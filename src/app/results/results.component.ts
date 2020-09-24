@@ -1,13 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { InspiritService } from '../inspirit.service';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  ElementRef,
+  OnDestroy,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css'],
 })
-export class ResultsComponent implements OnInit {
+export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
   isCollapsed: boolean = true;
   randomPhoto: any;
   videoResults: any;
@@ -18,11 +25,36 @@ export class ResultsComponent implements OnInit {
   nameText: string = 'friend';
   selectedFeeling: string;
   desktop: boolean;
+  @ViewChild('demoYouTubePlayer') demoYouTubePlayer: ElementRef<HTMLDivElement>;
+  videoWidth: number | undefined;
+  videoHeight: number | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    private service: InspiritService
+    private service: InspiritService,
+    private _changeDetectorRef: ChangeDetectorRef
   ) {}
+
+  //Youtube start
+  ngAfterViewInit(): void {
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+  }
+
+  onResize = (): void => {
+    // Automatically expand the video to fit the page up to 1200px x 720px
+    this.videoWidth = Math.min(
+      this.demoYouTubePlayer.nativeElement.clientWidth,
+      1200
+    );
+    this.videoHeight = this.videoWidth * 0.6;
+    this._changeDetectorRef.detectChanges();
+  };
+
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.onResize);
+  }
+  //YouTube end
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;

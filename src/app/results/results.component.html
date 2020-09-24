@@ -22,9 +22,7 @@
 
   <section class="right-side">
     <section class="recommendations">
-      <div>
-        <div class="tips-button">Recommendations:</div>
-      </div>
+      <div class="tips-button">Recommendations:</div>
       <div class="recommendations-container">
         <ol class="list">
           <li>{{ selectedResults.physicalactivity }}</li>
@@ -32,15 +30,17 @@
           <li>{{ selectedResults.socialactivity }}</li>
         </ol>
       </div>
-      <div class="video-text"><p>Check out this video:</p></div>
+      <div #demoYouTubePlayer class="video-text">
+        <p>Check out this video:</p>
+      </div>
       <section class="youtube">
         <div class="video-player">
           <youtube-player
             class="youtube-player"
             videoId="{{ videoResults.items[0].id.videoId }}"
             suggestedQuality="highres"
-            [height]="200"
-            [width]="370"
+            [height]="videoHeight"
+            [width]="videoWidth"
           >
           </youtube-player>
 

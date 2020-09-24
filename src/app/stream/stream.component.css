@@ -73,6 +73,7 @@
     height: 400px;
     margin: 15px;
     object-fit: cover;
+    border-radius: 10px;
   }
 
   .img-container {
