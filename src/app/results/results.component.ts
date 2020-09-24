@@ -15,7 +15,6 @@ import {
   styleUrls: ['./results.component.css'],
 })
 export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
-  isCollapsed: boolean = true;
   randomPhoto: any;
   videoResults: any;
   quoteResults: any;
@@ -25,6 +24,9 @@ export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
   nameText: string = 'friend';
   selectedFeeling: string;
   desktop: boolean;
+  photoArray: any[] = [];
+  quoteArray: any[] = [];
+  favorites: any[] = [];
   @ViewChild('demoYouTubePlayer') demoYouTubePlayer: ElementRef<HTMLDivElement>;
   videoWidth: number | undefined;
   videoHeight: number | undefined;
@@ -37,6 +39,7 @@ export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   //Youtube start
   ngAfterViewInit(): void {
+    this.favorites = this.service.getSaved();
     this.onResize();
     window.addEventListener('resize', this.onResize);
   }
@@ -56,9 +59,15 @@ export class ResultsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   //YouTube end
 
-  toggleCollapse() {
-    this.isCollapsed = !this.isCollapsed;
-  }
+  save = (photo, quote) => {
+    this.service.addSaved(photo, quote);
+    console.log(photo, quote);
+    this.favorites.some((item) => {
+      if (item.quote.quote === quote.quote) {
+        quote.favorite = true;
+      }
+    });
+  };
 
   ngOnInit(): void {
     this.getPhoto();
