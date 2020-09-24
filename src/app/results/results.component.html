@@ -16,9 +16,9 @@
         />
         <p class="quote">"{{ selectedResults?.quote }}"</p>
         <p class="author">-{{ selectedResults?.author }}</p>
-        <button class="add" (click)="save(randomPhoto, selectedResults)">
-          +
-        </button>
+        <span class="add" (click)="save(randomPhoto, selectedResults)">
+          <i class="fas fa-plus-circle"></i>
+        </span>
       </div>
     </section>
   </section>
